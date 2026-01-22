@@ -1,6 +1,5 @@
 --delete from vault.secrets;
-
-ALTER DATABASE postgres SET search_path TO "$user", public, extensions;
+--ALTER DATABASE postgres SET search_path TO "$user", public, extensions;
 
 insert into
   "auth"."users" (
@@ -122,7 +121,7 @@ values
     0,
     'selfhosted-unlimited',
     'prod_TJRd2hFHZsBIPK',
-    gen_random_uuid (),
+    gen_random_uuid(),
     'none',
     'none',
     9223372036854775807::bigint, -- max storage (~9EB)
@@ -164,7 +163,7 @@ values
     't',
     2,
     NOW() - interval '15 days',
-    NOW() + interval '15 days',
+    NOW() + interval '100 years'
     false,
     false,
     false,
