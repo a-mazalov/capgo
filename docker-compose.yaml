@@ -1,0 +1,7 @@
+services:
+  capgo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8084:80"

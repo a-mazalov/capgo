@@ -365,3 +365,14 @@ bun mobile
 
 And you will see the generated files in the `dist` directory, ready to be served
 on stores.
+
+### Docker
+
+```sh
+docker compose up -d
+
+# or
+
+docker build --tag capgo-frontend .
+docker run -p 8084:80 --name capgo capgo-frontend
+```
